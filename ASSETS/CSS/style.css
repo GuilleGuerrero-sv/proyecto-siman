@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    background-color: #ab343c;
+    width: 200px;
+}
+
+.search-bar input { 
+    width: 200%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.cart-icon img {
+    width: 40px;
+    cursor: pointer;
+}
+.login-icon img {
+    margin-left: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/*===================== navbar =====================*/
+nav {
+    margin-top: 10px;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.main-menu li {
+    position: relative;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+}
+
+.main-menu a:hover {
+    background-color: #f4f4f4;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    padding: 10px 0;
+    min-width: 150px;
+    z-index: 10;
+}
+
+.submenu li a {
+    padding: 10px 15px;
+    display: block;
+    white-space: nowrap;
+}
+
+.submenu li a:hover {
+    background-color: #f4f4f4;
+}
+
+
+
+
+/*===================== MAIN =====================*/
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-column,
+.right-column {
+    width: 30%;
+    height: 600px;
+    position: relative;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.left-column {
+    background-image: url('/ASSETS/IMG/ellas-moda.png');
+    background-position: unset;
+    
+}
+
+.right-column {
+    background-image: url('/ASSETS/IMG/ellos.png');
+}
+
+.middle-column {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+}
+
+.top-block,
+.middle-block,
+.bottom-block {
+    width: 100%;
+    overflow: hidden;
+}
+
+.top-block {
+    height: 24%;
+    background-color: #f4f4f4; /* Puedes cambiar este color según tu necesidad */
+}
+
+.middle-block {
+    height: 49%;
+}
+
+.bottom-block {
+    height: 24%;
+    background-color: #f4f4f4; /* Puedes cambiar este color según tu necesidad */
+}
+
+.middle-block img,
+.top-block img,
+.bottom-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantener la proporción de la imagen */
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;    
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    border-radius: 10px;
+}
+
+.cta-button {
+    background-color: #ffffff71;
+    color: #333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+}
+
+/* Carousel Functionality */
+.carousel-item:first-child {
+    display: block;
+}
+
+.carousel-item {
+    display: none;
+    animation: slide 10s infinite;
+}
+
+@keyframes slide {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
