@@ -27,7 +27,7 @@ header {
 }
 
 .logo img {
-    max-height: 50px; /* Ajusta la altura del logo según sea necesario */
+    max-height: 50px; 
 }
 
 .search-bar {
@@ -39,7 +39,7 @@ header {
 /*===================== barra de busqueda =====================*/
 .search-bar input {
     width: 100%;
-    max-width: 400px; /* Ajusta el ancho máximo de la barra de búsqueda */
+    max-width: 400px; 
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -52,7 +52,7 @@ header {
 
 .login-icon img,
 .cart-icon img {
-    width: 40px; /* Ajusta el tamaño de los íconos según sea necesario */
+    width: 40px; 
     height: auto;
     margin-left: 15px;
 }
@@ -124,7 +124,7 @@ nav {
 
 .carrusel-items {
     display: flex;
-    width: calc(31% * 8); /* Ajustar el número 4 al número de imágenes */
+    width: calc(31% * 8); 
     animation: scroll 30s infinite linear;
 }
 
@@ -194,7 +194,7 @@ nav {
 
 .top-block {
     height: 24%;
-    background-color: #f4f4f4; /* Puedes cambiar este color según tu necesidad */
+    background-color: #f4f4f4; 
 }
 
 .middle-block {
@@ -203,7 +203,7 @@ nav {
 
 .bottom-block {
     height: 24%;
-    background-color: #f4f4f4; /* Puedes cambiar este color según tu necesidad */
+    background-color: #f4f4f4; 
 }
 
 .middle-block img,
