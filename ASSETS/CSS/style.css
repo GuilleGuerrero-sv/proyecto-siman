@@ -16,30 +16,45 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Ajusta el espaciado alrededor del contenido */
+   
+}
+
+.logo {
+    flex: 1;
 }
 
 .logo img {
-    background-color: #ab343c;
-    width: 200px;
+    max-height: 50px; /* Ajusta la altura del logo según sea necesario */
 }
 
-.search-bar input { 
-    width: 200%;
-    padding: 10px;
-    border-radius: 5px;
+.search-bar {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+/*===================== barra de busqueda =====================*/
+.search-bar input {
+    width: 100%;
+    max-width: 400px; /* Ajusta el ancho máximo de la barra de búsqueda */
+    padding: 8px;
     border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/*===================== iconos =====================*/
+.icon-container {
+    display: flex;
+    gap: 50px; /* Espacio entre los íconos */
 }
 
+.login-icon img,
 .cart-icon img {
-    width: 40px;
-    cursor: pointer;
-}
-.login-icon img {
-    margin-left: 40px;
-    width: 40px;
-    cursor: pointer;
+    width: 40px; /* Ajusta el tamaño de los íconos según sea necesario */
+    height: auto;
+    margin-left: 15px;
 }
 
 /*===================== navbar =====================*/
@@ -94,6 +109,44 @@ nav {
     background-color: #f4f4f4;
 }
 
+/*===================== carrusell =====================*/
+.carrusel-promos {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #ab343c;
+    border: 5px solid #ddd; /* Borde del carrusel */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+    padding-top: 4px;
+    
+}
+
+.carrusel-items {
+    display: flex;
+    width: calc(31% * 8); /* Ajustar el número 4 al número de imágenes */
+    animation: scroll 30s infinite linear;
+}
+
+.carrusel-items a {
+    width: calc(100% / 4); /* Cada imagen ocupa su propia parte del contenedor */
+}
+
+.carrusel-items img {
+    width: 100%;
+    margin-right: 20px;    
+    border-radius: 4px;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 
 
 
@@ -108,7 +161,7 @@ nav {
 .left-column,
 .right-column {
     width: 30%;
-    height: 600px;
+    height: 700px;
     position: relative;
     background-size: cover;
     border-radius: 10px;
@@ -129,7 +182,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 600px;
+    height: 700px;
 }
 
 .top-block,
@@ -202,4 +255,149 @@ nav {
     20% { opacity: 1; }
     80% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+
+/*===================== FOOTER =====================*/
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    gap: 10px;
+    padding: 20px;
+    background: #ad2e2e;
+    color: #fff;
+}
+
+.footer__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__logo img {
+    max-width: 150px;
+}
+
+.footer__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer__form form {
+    width: 100%;
+    max-width: 300px;
+}
+
+.footer__form legend {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer__form fieldset {
+    border: none;
+    padding: 0;
+}
+
+.footer__form input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.footer__form button {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    background: #f77f00;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer__form button:hover {
+    background: #d85c00;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer__link-item {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.footer__link-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+}
+
+.footer__link-item a:hover {
+    text-decoration: underline;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background: #444;
+    top: 0;
+    left: 100%;
+    margin-left: 10px; /* Espacio entre el enlace y el submenú */
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.submenu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.submenu a:hover {
+    text-decoration: underline;
+}
+
+.footer__link-item:hover .submenu {
+    display: block;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    grid-column: span 3;
+}
+
+.footer__social a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer__social a i {
+    margin: 0; /* Asegura que no haya márgenes adicionales en los íconos */
+}
+.footer__social a:hover {
+    color: #f77f00;
+}
+
+.footer__copyright {
+    text-align: center;
+    grid-column: span 3;
+    margin-top: 20px;
 }
