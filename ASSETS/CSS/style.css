@@ -88,10 +88,11 @@ nav {
     display: block;
 }
 
+
 .submenu {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background-color: #363636;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     list-style-type: none;
     padding: 10px 0;
@@ -346,12 +347,12 @@ nav {
     text-decoration: underline;
 }
 
-.submenu {
+.footer__link-item .submenu {
     display: none;
     position: absolute;
     background: #444;
     top: 0;
-    left: 100%;
+    right: 100%;
     margin-left: 10px; /* Espacio entre el enlace y el submenú */
     padding: 10px;
     border-radius: 4px;
@@ -363,7 +364,7 @@ nav {
     color: #fff;
     text-decoration: none;
     display: block;
-    padding: 5px 0;
+    padding: 2px;
 }
 
 .submenu a:hover {
